@@ -22,13 +22,27 @@ class HomeScreen extends StatelessWidget {
         ),
         actions: [
           Container(
-            margin: EdgeInsets.only(right: 12),
-            child: SvgPicture.asset('assets/icons/cart.svg',
-                height: 25,
-                width: 25,
-                color: Palette.dark,
-                semanticsLabel: 'Cart Bag'),
-          )
+              margin: EdgeInsets.only(right: 12),
+              child: Stack(
+                alignment: Alignment.center,
+                children: [
+                  SvgPicture.asset('assets/icons/cart.svg',
+                      height: 25,
+                      width: 25,
+                      color: Palette.dark,
+                      semanticsLabel: 'Cart Bag'),
+                  Positioned(
+                    height: 8,
+                    width: 8,
+                    child: Container(
+                      decoration: BoxDecoration(
+                          color: Colors.red, shape: BoxShape.circle),
+                    ),
+                    right: 3,
+                    top: 18,
+                  )
+                ],
+              )),
         ],
       ),
       body: SingleChildScrollView(

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_shop_headphones_ui/screens/cart/cartScreen.dart';
 import 'package:flutter_shop_headphones_ui/screens/home/HomeScreen.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -24,7 +25,7 @@ class MyApp extends StatelessWidget {
         fontFamily: GoogleFonts.roboto().fontFamily,
         textTheme: GoogleFonts.robotoTextTheme(),
       ),
-      home: HomeScreen(),
+      home: CartScreen(),
     );
   }
 }
