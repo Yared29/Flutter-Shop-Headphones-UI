@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_shop_headphones_ui/config/palette.dart';
+import 'package:flutter_shop_headphones_ui/models/Product.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 import 'components/popularProductCard.dart';
@@ -44,8 +45,8 @@ class PopularProducts extends StatelessWidget {
           scrollDirection: Axis.horizontal,
           child: Row(
             children: [
-              PopularProductCard(),
-              PopularProductCard(),
+              for (Product product in products)
+                PopularProductCard(product: product),
             ],
           ),
         )

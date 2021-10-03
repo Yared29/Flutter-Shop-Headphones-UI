@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_shop_headphones_ui/screens/cart/cartScreen.dart';
 import 'package:flutter_shop_headphones_ui/screens/home/recommendedProducts.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:flutter_shop_headphones_ui/config/palette.dart';
@@ -21,28 +22,34 @@ class HomeScreen extends StatelessWidget {
               color: Palette.dark, semanticsLabel: 'User Icon'),
         ),
         actions: [
-          Container(
-              margin: EdgeInsets.only(right: 12),
-              child: Stack(
-                alignment: Alignment.center,
-                children: [
-                  SvgPicture.asset('assets/icons/cart.svg',
-                      height: 25,
-                      width: 25,
-                      color: Palette.dark,
-                      semanticsLabel: 'Cart Bag'),
-                  Positioned(
-                    height: 8,
-                    width: 8,
-                    child: Container(
-                      decoration: BoxDecoration(
-                          color: Colors.red, shape: BoxShape.circle),
-                    ),
-                    right: 3,
-                    top: 18,
-                  )
-                ],
-              )),
+          GestureDetector(
+            onTap: () => Navigator.push(
+                context,
+                MaterialPageRoute(
+                    builder: (BuildContext context) => CartScreen())),
+            child: Container(
+                margin: EdgeInsets.only(right: 12),
+                child: Stack(
+                  alignment: Alignment.center,
+                  children: [
+                    SvgPicture.asset('assets/icons/cart.svg',
+                        height: 25,
+                        width: 25,
+                        color: Palette.dark,
+                        semanticsLabel: 'Cart Bag'),
+                    Positioned(
+                      height: 8,
+                      width: 8,
+                      child: Container(
+                        decoration: BoxDecoration(
+                            color: Colors.red, shape: BoxShape.circle),
+                      ),
+                      right: 3,
+                      top: 18,
+                    )
+                  ],
+                )),
+          ),
         ],
       ),
       body: SingleChildScrollView(

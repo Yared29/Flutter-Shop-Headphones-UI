@@ -39,7 +39,7 @@ class _ProductColorsState extends State<ProductColors> {
                     height: 20,
                     width: 20,
                     decoration: BoxDecoration(
-                      color: color,
+                      color: color.withOpacity(0.8),
                       shape: BoxShape.circle,
                     ),
                   )),

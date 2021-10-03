@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_shop_headphones_ui/config/palette.dart';
+import 'package:flutter_shop_headphones_ui/models/Product.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 class CartProductCard extends StatelessWidget {
-  const CartProductCard({Key? key}) : super(key: key);
+  final Product product;
+  const CartProductCard({Key? key, required this.product}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -25,12 +27,12 @@ class CartProductCard extends StatelessWidget {
                 height: 80,
                 width: 80,
                 decoration: BoxDecoration(
-                    color: Colors.red.withOpacity(0.1),
+                    color: product.colors[0].withOpacity(0.1),
                     borderRadius: BorderRadius.circular(20)),
                 child: Container(
                   margin: EdgeInsets.all(10),
                   child: Image.asset(
-                    'assets/images/beats.png',
+                    product.images[0],
                     fit: BoxFit.cover,
                   ),
                 )),
@@ -41,7 +43,7 @@ class CartProductCard extends StatelessWidget {
                 children: [
                   Padding(
                     padding: EdgeInsets.fromLTRB(20, 8, 8, 2),
-                    child: Text('Beats Max',
+                    child: Text(product.name,
                         style: TextStyle(
                           color: Palette.dark,
                           fontSize: 20,
@@ -49,7 +51,7 @@ class CartProductCard extends StatelessWidget {
                   ),
                   Padding(
                       padding: EdgeInsets.fromLTRB(20, 0, 8, 20),
-                      child: Text('\$500',
+                      child: Text('\$${product.price}',
                           style: TextStyle(
                               color: Palette.dark,
                               fontSize: 25,

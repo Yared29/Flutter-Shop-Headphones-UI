@@ -85,6 +85,8 @@ class _DetailScreenState extends State<DetailScreen> {
                           onPressed: minusQty,
                           child: SvgPicture.asset(
                             'assets/icons/minus.svg',
+                            height: 20,
+                            width: 20,
                           )),
                       SizedBox(width: 7),
                       Text(qty.toString(),
@@ -99,6 +101,8 @@ class _DetailScreenState extends State<DetailScreen> {
                         onPressed: addQty,
                         child: SvgPicture.asset(
                           'assets/icons/plus.svg',
+                          height: 20,
+                          width: 20,
                         ),
                       )
                     ],

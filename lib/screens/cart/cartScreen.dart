@@ -2,8 +2,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_shop_headphones_ui/config/palette.dart';
 import 'package:flutter_shop_headphones_ui/screens/cart/cartProducts.dart';
-import 'package:flutter_shop_headphones_ui/screens/cart/components/checkoutButton.dart';
 import 'package:flutter_shop_headphones_ui/screens/cart/components/paymentCard.dart';
+import 'package:flutter_shop_headphones_ui/screens/components/largeButton.dart';
 
 class CartScreen extends StatelessWidget {
   const CartScreen({Key? key}) : super(key: key);
@@ -72,7 +72,7 @@ class CartScreen extends StatelessWidget {
           ),
         ),
       ),
-      bottomSheet: CheckoutButton(),
+      bottomSheet: LargeButton(text: 'Checkout', onTap: () {}),
     );
   }
 }

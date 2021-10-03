@@ -1,16 +1,17 @@
-# flutter_shop_headphones_ui
+# Flutter Shop Headphones UI
 
-A new Flutter project.
+UI design by Taras Migulko
 
-## Getting Started
+https://dribbble.com/shots/16067151-The-Shopper-mobile-app-design
 
-This project is a starting point for a Flutter application.
+Home
 
-A few resources to get you started if this is your first Flutter project:
+![Home](./images/home.jpg)
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+Detail
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+![Detail](./images/detail.jpg)
+
+Cart
+
+![Cart](./images/cart.jpg)

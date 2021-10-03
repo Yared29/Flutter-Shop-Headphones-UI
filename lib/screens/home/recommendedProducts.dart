@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_shop_headphones_ui/config/palette.dart';
+import 'package:flutter_shop_headphones_ui/models/Product.dart';
 import 'package:flutter_shop_headphones_ui/screens/home/components/recommededProductCard.dart';
 
 class RecommendedProducts extends StatelessWidget {
@@ -33,8 +34,8 @@ class RecommendedProducts extends StatelessWidget {
         SizedBox(height: 5),
         Column(
           children: [
-            RecommededProductCard(),
-            RecommededProductCard(),
+            for (Product product in products)
+              RecommededProductCard(product: product),
           ],
         ),
       ],
